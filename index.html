@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Репетитор английского языка — индивидуальные занятия, разговорная практика, подготовка к экзаменам. Яркие и результативные уроки онлайн и офлайн." />
+  <title>Репетитор английского — Елена Иванова</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1: #fff7ef; /* very light cream */
+      --orange-50: #fff3e0;
+      --orange-100: #ffd8a8;
+      --accent: #ff7a00; /* bright orange */
+      --accent-2: #ff9b3d; /* secondary orange */
+      --muted: #6b6b6b;
+      --glass: rgba(255,255,255,0.6);
+      --card-shadow: 0 8px 30px rgba(255,122,0,0.12);
+      --radius: 18px;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(180deg,var(--orange-50),var(--bg-1));
+      color:#111;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:24px;
+    }
+
+    .container{max-width:1100px;margin:0 auto}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px;border-radius:16px;background:linear-gradient(90deg, rgba(255,255,255,0.7), rgba(255,255,255,0.35));backdrop-filter: blur(6px);box-shadow:var(--card-shadow);
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:22px;box-shadow:0 6px 18px rgba(255,122,0,0.25);
+    }
+    .brand h1{margin:0;font-size:18px}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav a{margin-left:10px;color:#4a4a4a;text-decoration:none;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin:28px 0}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.hero-card{order:2}}
+
+    .hero-left h2{font-size:38px;margin:0 0 8px}
+    .tagline{display:inline-block;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;font-weight:700;margin-bottom:14px}
+    .hero-left p{color:var(--muted);font-size:16px;margin-top:0}
+
+    .cta-row{display:flex;gap:12px;margin-top:18px}
+    .btn{
+      padding:12px 18px;border-radius:12px;border:0;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    }
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+    .btn-outline{background:transparent;border:2px solid rgba(255,122,0,0.12);color:var(--accent);}
+
+    /* Card */
+    .hero-card{background:linear-gradient(180deg,white, #fffaf5);padding:20px;border-radius:16px;box-shadow:var(--card-shadow)}
+    .profile{display:flex;gap:14px;align-items:center}
+    .photo{width:84px;height:84px;border-radius:14px;flex-shrink:0;background:linear-gradient(180deg,#fff,#ffe6cc);display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .photo img{width:100%;height:100%;object-fit:cover}
+    .profile h3{margin:0;font-size:18px}
+    .profile p{margin:0;color:var(--muted);font-size:13px}
+
+    .feature-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .feature{display:flex;gap:10px;align-items:start}
+    .feature svg{flex-shrink:0}
+
+    /* Pricing */
+    .pricing{display:flex;gap:12px;margin:22px 0}
+    .price-card{flex:1;padding:16px;border-radius:14px;background:white;box-shadow:0 10px 30px rgba(0,0,0,0.04);border:1px solid rgba(255,122,0,0.05)}
+    .price-card h4{margin:0 0 6px}
+    .price{font-size:20px;font-weight:800;color:var(--accent);}
+
+    /* Testimonials */
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+    @media (max-width:900px){.testimonials{grid-template-columns:1fr}}
+    .bubble{padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff,#fff7f0);border:1px solid rgba(255,122,0,0.06)}
+
+    /* Contact */
+    form{display:grid;gap:10px}
+    input,textarea,select{padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.08);font-size:14px}
+    textarea{min-height:110px;resize:vertical}
+
+    footer{margin-top:28px;padding:18px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,0.6),rgba(255,255,255,0.35));backdrop-filter:blur(6px);display:flex;justify-content:space-between;align-items:center}
+
+    /* little animated flourish */
+    .sparkle{display:inline-block;transform-origin:center;animation:pop 2.2s infinite}
+    @keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+
+    .pill{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:6px 10px;border-radius:999px;font-weight:700}
+
+    /* small screens */
+    @media (max-width:480px){
+      .hero-left h2{font-size:28px}
+      header{flex-direction:column;align-items:flex-start}
+      nav{width:100%;display:flex;justify-content:flex-end}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">EN</div>
+        <div>
+          <h1>Елена Иванова</h1>
+          <p>Индивидуальные и мини-группы • Онлайн / Офлайн</p>
+        </div>
+      </div>
+      <nav aria-label="Главное меню">
+        <a href="#about">О себе</a>
+        <a href="#services">Услуги</a>
+        <a href="#pricing">Цены</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <span class="tagline">Яркие уроки. Быстрый результат.</span>
+        <h2 id="hero-title">Выучите английский уверенно и с удовольствием</h2>
+        <p>Индивидуальная программа, разговорная практика, подготовка к экзаменам и собеседованиям. Подбираю материал под ваши цели и интересы — от путешествий до работы в международной компании.</p>
+
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Записаться на урок</button>
+          <a class="btn btn-outline" href="#services">Узнать подробнее</a>
+        </div>
+
+        <ul style="margin-top:18px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;list-style:none;padding:0">
+          <li>✓ Бесплатная пробная встреча (30 мин)</li>
+          <li>✓ Индивидуальный учебный план</li>
+          <li>✓ Удобное время — утро и вечер</li>
+        </ul>
+      </div>
+
+      <aside class="hero-card" aria-label="Профиль преподавателя">
+        <div class="profile">
+          <div class="photo" aria-hidden="true">
+            <!-- Placeholder SVG avatar -->
+            <svg width="84" height="84" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="24" height="24" rx="6" fill="#fff1e6"/>
+              <path d="M12 12c1.933 0 3.5-1.567 3.5-3.5S13.933 5 12 5 8.5 6.567 8.5 8.5 10.067 12 12 12z" fill="#ff9b3d"/>
+              <path d="M6.5 18c0-2.761 2.239-5 5-5s5 2.239 5 5v1h-10v-1z" fill="#ffd3a6"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Елена Иванова</h3>
+            <p>Опыт более 8 лет • Cambridge CELTA • Специализация: разговорный, Business English</p>
+          </div>
+        </div>
+
+        <div class="feature-list" style="margin-top:14px">
+          <div class="feature">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l4 4-4 4-4-4 4-4zM4 20v-8l4-4" stroke="#ff7a00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>Разговорная практика</strong>
+              <div style="font-size:13px;color:var(--muted)">Ежедневные темы и живые диалоги</div>
+            </div>
+          </div>
+
+          <div class="feature">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h18M12 3v14" stroke="#ff7a00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>Гибкий график</strong>
+              <div style="font-size:13px;color:var(--muted)">Утренние и вечерние группы</div>
+            </div>
+          </div>
+
+          <div class="feature">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#ff7a00" stroke-width="1.6"/></svg>
+            <div>
+              <strong>Онлайн + офлайн</strong>
+              <div style="font-size:13px;color:var(--muted)">Zoom / Google Meet / Москва</div>
+            </div>
+          </div>
+
+          <div class="feature">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 6v6l4 2" stroke="#ff7a00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>Подготовка к экзаменам</strong>
+              <div style="font-size:13px;color:var(--muted)">IELTS / TOEFL / Cambridge</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:10px;align-items:center;justify-content:space-between">
+          <div>
+            <div style="font-size:12px;color:var(--muted)">Свободные слоты на этой неделе</div>
+            <div style="font-weight:800;margin-top:6px">Пн, Ср — 19:00 • Сб — 10:00</div>
+          </div>
+          <div>
+            <a class="btn btn-primary" href="#contact">Забронировать</a>
+          </div>
+        </div>
+
+      </aside>
+    </section>
+
+    <section id="services">
+      <h3 style="margin:0 0 8px">Услуги</h3>
+      <p style="color:var(--muted);margin-top:0">Коротко о том, что я предлагаю — для кого и что входит.</p>
+
+      <div class="pricing" role="list">
+        <div class="price-card" role="listitem">
+          <h4>Индивидуальные занятия</h4>
+          <div class="price">1200 ₽ / 60 мин</div>
+          <p style="color:var(--muted)">Полностью персонализированная программа, домашние задания, прогресс-трек.</p>
+        </div>
+        <div class="price-card" role="listitem">
+          <h4>Мини-группа (3-5 чел.)</h4>
+          <div class="price">800 ₽ / чел / 60 мин</div>
+          <p style="color:var(--muted)">Интерактивные занятия, ролевые игры, выгоднее по цене.</p>
+        </div>
+        <div class="price-card" role="listitem">
+          <h4>Интенсив / Подготовка</h4>
+          <div class="price">от 1600 ₽ / 90 мин</div>
+          <p style="color:var(--muted)">Экзаменационные тренировки, разбор ошибок, пробные тесты.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:8px">
+      <h3 style="margin:0 0 8px">Отзывы</h3>
+      <div class="testimonials">
+        <div class="bubble">
+          <strong>Анна, 26</strong>
+          <p style="margin:6px 0;color:var(--muted)">Пробная встреча понравилась — уже через месяц чувствую уверенность в разговоре.</p>
+        </div>
+        <div class="bubble">
+          <strong>Игорь, 34</strong>
+          <p style="margin:6px 0;color:var(--muted)">Помогла подготовиться к собеседованию — прошёл на позицию в международной компании.</p>
+        </div>
+        <div class="bubble">
+          <strong>Мария, 19</strong>
+          <p style="margin:6px 0;color:var(--muted)">Я сдала IELTS — улучшения заметны уже после 8 занятий.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:10px">
+      <h3 style="margin:0 0 8px">Связаться</h3>
+      <p style="color:var(--muted)">Оставьте сообщение — я свяжусь в течение 24 часов.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:12px">
+        <form onsubmit="event.preventDefault(); handleSubmit();" aria-label="Форма связи">
+          <label>
+            <div style="font-weight:700">Имя</div>
+            <input id="name" required placeholder="Ваше имя" />
+          </label>
+
+          <label>
+            <div style="font-weight:700">Телефон или e‑mail</div>
+            <input id="contactInfo" required placeholder="Телефон или e-mail" />
+          </label>
+
+          <label>
+            <div style="font-weight:700">Цель</div>
+            <select id="goal" aria-label="Цель занятий">
+              <option value="conversation">Разговорная практика</option>
+              <option value="business">Business English</option>
+              <option value="exam">Подготовка к экзамену</option>
+              <option value="other">Другое</option>
+            </select>
+          </label>
+
+          <label>
+            <div style="font-weight:700">Сообщение</div>
+            <textarea id="message" placeholder="Кратко опишите пожелания"></textarea>
+          </label>
+
+          <div style="display:flex;gap:10px;align-items:center;margin-top:6px">
+            <button class="btn btn-primary" type="submit">Отправить</button>
+            <a class="btn btn-outline" href="mailto:elena.tutor@example.com">Написать на почту</a>
+          </div>
+
+          <div id="notice" style="color:var(--muted);font-size:13px;margin-top:8px"></div>
+        </form>
+
+        <aside style="padding:16px;border-radius:12px;background:white;box-shadow:var(--card-shadow)">
+          <h4 style="margin:0 0 8px">Контакты</h4>
+          <p style="margin:0;color:var(--muted)"><strong>Тел:</strong> +7 (900) 000-00-00<br><strong>Email:</strong> elena.tutor@example.com</p>
+
+          <div style="margin-top:12px">
+            <div class="pill">Пробный урок — бесплатно</div>
+          </div>
+
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Работаю онлайн и в Москве. Удобные пакеты занятий и гибкая оплата.</div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div>© Елена Иванова — репетитор английского • 2025</div>
+      <div style="font-size:13px;color:var(--muted)">Соцсети: Telegram / WhatsApp</div>
+    </footer>
+  </div>
+
+  <script>
+    function handleSubmit(){
+      const name = document.getElementById('name').value.trim();
+      const contact = document.getElementById('contactInfo').value.trim();
+      const goal = document.getElementById('goal').value;
+      const message = document.getElementById('message').value.trim();
+
+      const notice = document.getElementById('notice');
+      if(!name || !contact){ notice.textContent = 'Пожалуйста, заполните имя и контакты.'; return }
+
+      // Простая имитация отправки — создаём mailto как fallback
+      const subject = encodeURIComponent('Запись на урок — ' + name + ' — ' + goal);
+      const body = encodeURIComponent('Имя: ' + name + '\nКонтакты: ' + contact + '\nЦель: ' + goal + '\n\nСообщение:\n' + message);
+      const mailto = 'mailto:elena.tutor@example.com?subject=' + subject + '&body=' + body;
+      // открываем почтовый клиент
+      window.location.href = mailto;
+      notice.textContent = 'Открывается почтовый клиент. Если он не открылся — напишите на elena.tutor@example.com';
+    }
+  </script>
+</body>
+</html>
